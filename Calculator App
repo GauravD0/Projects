@@ -38,6 +38,10 @@ public class cal extends javax.swing.JFrame {
                 ans=num/Double.parseDouble(jTextField1.getText());
                 jTextField1.setText(Double.toString(ans));
                 break;
+            case 5:
+                ans=(num/100)*Double.parseDouble(jTextField1.getText());
+                jTextField1.setText(Double.toString(ans));
+                break;
         }
     }
 
@@ -465,7 +469,10 @@ public class cal extends javax.swing.JFrame {
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-        jTextField1.setText(jTextField1.getText()+"%");
+        num=Double.parseDouble(jTextField1.getText());
+        calculation=5;
+        jTextField1.setText("");
+        jLabel1.setText(num/100+"*");
     }                                         
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {                                          
